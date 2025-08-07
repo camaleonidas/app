@@ -1,0 +1,26 @@
+name: mentoria-app
+region: nyc
+services:
+- name: web
+  github:
+    repo: seu-usuario/mentoria-app
+    branch: main
+    deploy_on_push: true
+  build_command: npm run build
+  run_command: npm start
+  environment_slug: node-js
+  instance_count: 1
+  instance_size_slug: basic-xxs
+  routes:
+  - path: /
+  env:
+  - key: NODE_ENV
+    value: production
+  - key: NEXT_PUBLIC_SUPABASE_URL
+    value: ${NEXT_PUBLIC_SUPABASE_URL}
+  - key: NEXT_PUBLIC_SUPABASE_ANON_KEY
+    value: ${NEXT_PUBLIC_SUPABASE_ANON_KEY}
+  - key: NEXT_PUBLIC_SITE_URL
+    value: ${NEXT_PUBLIC_SITE_URL}
+  health_check:
+    http_path: /health
