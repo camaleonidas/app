@@ -8,6 +8,9 @@ import { RefreshCw, Trash2, Database, HardDrive } from "lucide-react"
 import { useAuth } from "@/contexts/auth-context"
 
 export function DebugAgendamentosDetalhado() {
+  // Componente desabilitado - removido do front-end
+  return null
+  
   const { user } = useAuth()
   const [agendamentosLocal, setAgendamentosLocal] = useState<any[]>([])
   const [agendamentosSupabase, setAgendamentosSupabase] = useState<any[]>([])

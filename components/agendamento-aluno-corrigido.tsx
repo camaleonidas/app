@@ -373,9 +373,6 @@ export function AgendamentoAlunoCorrigido() {
 
   return (
     <div className="space-y-6">
-      {/* Status da Conexão */}
-      <StatusConexao />
-
       {/* Botão Calls Realizadas - Destaque */}
       <Card className="border-purple-200 bg-gradient-to-r from-purple-50 to-purple-100">
         <CardContent className="p-6">
